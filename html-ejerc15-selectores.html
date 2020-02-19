@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+   <html>
+      <head>
+            <meta charset="utf-8">
+            <title>Challenge: Apples and bananas classes</title>
+         <style>
+           .nombre {color: rgb(0,0,255)}
+           #Identificador {color: rgb(255,0,0)}
+           * {font-family: "arial"}
+           p:hover {color: rgb(0,255,0)}
+           li {font-style: italic;}
+           p strong { color: purple} 
+         </style>
+       </head>
+   <body>
+
+     <h1> Tipos de selectores que entran en examen</h1>
+        <ol>
+            <li><h2>Clase (class=””)</h2></li>
+             <p>Una <strong>clase</strong> es una definición de un estilo que en principio no está asociado a alguna etiqueta HTML, pero que podemos asociar a etiquetas concretas.<br>
+               Mediante la definición de "clases'"" se establecen estilos que pueden aplicarse a cualquier etiqueta de HTML.<br>
+               El estilo no se vincula a una etiqueta concreto sino a una "clase",esta clase, actua como atributo de cualquier etiqueta, cada vez que se quiera llamar<br> a ese estilo,
+                basta con incluir el nombre de esa clase dentro de la etiqueta correspondiente.</p>
+                <h3 class="nombre">Ejemplo</h3>
+                La palabra ejemplo la he puesto azul con class="" poniendo entre las dos etiquetas de style un .nombre.
+
+            <li> <h2>Identificador (id=””)</h2></li>
+             <p>En un documento HTML, los <strong>selectores de ID de CSS </strong> buscan un elemento basado en el contenido del atributo id. El atributo ID del elemento seleccionado debe coincidir
+               exactamente con el valor dado en el selector.</p>
+               <h3 id="Identificador"> Ejemplo</h3>
+               La palabra ejemplo la he puesto roja con id poniendo entre las dos etiquetas style un #Identificador.
+
+            <li><h2>Todos los elementos (*)</h2> </li>
+             <p>Se llama <strong>selector universal</strong>. Se utiliza para seleccionar todos los elementos de la página.</p>
+             <h3>Ejemplo</h3>
+             Todo el texto de esta página ahora está en arial.
+            <li><h2>Varios elementos ( p, em, h1, h2)</h2></li>
+             <p>Se llama <strong>selector de etiqueta</strong>. Selecciona todos los elementos de la página cuya etiqueta HTML coincide con el valor del selector.</p> 
+               <h3>Ejemplo</h3>
+               Todos los elementos con etiqueta li ahora están en cursiva.
+              
+            <li> <h2>Elementos contenidos en otros elementos (ol li)</h2> </li>
+             <p>Todos los elementos dentro de las etiquetas p que a su vez están dentro de una etiqueta strong están en morado.</p>
+
+
+            <li> <h2>Sobrevuleo (p:hover)</h2></li>
+            <p>La <strong>pseudo-clase</strong>: hover de CSS coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa.
+               Generalmente se activa cuando el usuario se desplaza sobre un elemento con el cursor.</p>
+               <h3>Ejemplo</h3>
+               Todo el texto pertenecientes a la etiqueta p está en color verde cuando pasas el cursor por encima del texto correspondiente.
+        </ol>
+
+
+
+   </body>
+   </html>
