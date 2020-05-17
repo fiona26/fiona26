@@ -1,161 +1,185 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-  <head>
-   <title>Mi trabajo en TIC II</title>
-     <meta charset="utf-8">
-     <style>
-     :root { background-color: rgb(210, 158, 249);
-              font-size: 1.25vw;
-              font-family: "Times New Roman";}
-     *{padding: 0px;
-       margin: 5px;
-       }
-       header{ background-color:rgb(255,255,224);
-       position: fixed;
-       min-height: 3.5rem;
-       width: 100%;
-       z-index:1001;}
-       header div{position: fixed;
-                  top: 0.5rem;
-                  left:0px;
-                  font-size: 1.2rem;}
-       header nav{ position: fixed;
-                  
-                   top:1rem;
-                   font-weight: bold;}
-       header nav ul {text-align: left;}
-       header nav ul > li{ display: inline-block;
-       vertical-align: top;
-       text-align: right;
-       min-width: 150 px;}
-       header nav ul li > ul{display: none;}
-       header nav ul li:hover ul{ display: inline-block;
-       text-align:right;}
-       header nav ul li:hover li{display: block;
-       background-color: rgb (255,255,224);}
-       .submenu:hover ul{display:block;}
-       .head {text-align: left;}
-       .head2 {text-align: right;}
-        #LISTA {background-color: rgb(240,128,128)}
-        #TICII{background-color: rgb(179, 218, 255);}
-        #Ejercicios{background-color: rgb(179, 218, 255)}
-        p{font-family: Arial, Helvetica, sans-serif;}
-        h2{font-family: Arial Black;}
-        h1{font-family: Brush Script MT; text-align: center;
-           color: rgb(176,224,230);}
-        h3{font-family: Comic Sans MS;}
-        h4 {font-style: italic ; text-align: center;}
-        a {font-family: "Times New Roman";}
-        #Center{text-align: center;}
-        #Center1{text-align: center;}
-        h2 {font-family: 'Times New Roman'}
-        #Hosting {background-color: rgb(255, 255, 153);}
-        
-         #img h1 { text-align: center;
-                   position: absolute;
-                   top: 50%;
-                   left: 50%;
-                   transform: translate(-50%, -50%);
-                    color: white;}
-         #Middle {text-align: center;}
-        .buton {background-color: rgb(255,215,0);
-                  color: rgb(32,178,170);
-                  padding: 14px 25px;
-                  text-align: center; 
-                  text-decoration: none;
-                  display: inline-block;
-                  }
-         a:hover, a:active {background-color: rgb(210, 158, 249); color: white;}
-         footer {text-align: center; background-color:rgb(245,245,220);}
-        
-         h4.desplazado {
-  background-color: rgb(245,245,220) ;
-  border: black 1px solid;
-  position: relative;
-  bottom: 50px;
-  top: 0px;
-  left: 0px;
-  border: "black 2px solid";}
-     </style>
-  </head>
- <body >
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            :root{
+                font-family: Arial, Helvetica, sans-serif;
+                --color_oscuro:rgb(240,255,255);
+                --color_oscuro_transparente:rgb(176,224,230);
+                --blanco: #fff;
+                
+                font-size: 90%/1.3 ;
+            }
+            #PosicionamientoGrid{
+                display: grid;
+                grid-gap: 5px;
+                grid-template-rows: 1fr 9fr;
+                grid-template-columns: 1fr 2fr 1fr;
+                grid-template-areas:
+                "header header"
+                "nav content"
+                "nav footer"
+                ;
+            }
+            #header{
+                background-color: var(--color_oscuro_transparente);
+                color:var(--rojo);
+                grid-area: header;
+                text-align: center;
+            }
+            #nav{
+                grid-area: nav;
+                background-color: var(--color_oscuro_transparente);
+            }
+            #nav li a{
+                background-color: var(--color_oscuro_transparente);
+                color:var(--blanco);
+            }
+            #nav li a:hover{
+                background-color: var(--blanco);
+                color:	rgb(221,160,221);
+            }
+            #content li a{
+                background-color: var(--color_oscuro_transparente);
+                color:var(--blanco);
+            }
+            #content li a:hover{
+                background-color: var(--blanco);
+                color: rgb(221,160,221);
+            }
+            #content{
+                grid-area: content;
+                background-color: var(--color_oscuro_transparente);
+            }
+            
+            #footer{
+                grid-area: footer;
+                background-image: url("heroimage.jpg");
+                background-color: #cccccc;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: var(--color_oscuro_transparente);
+            }
+            #footer p{
+                background-color: var(--color_oscuro_transparente);
+                color:var(--blanco);    
+            }
+            @media (max-width: 702px){
+                #PosicionamientoGrid{
+                display: grid;
+                grid-gap: 5px;
+                grid-template-columns: 100%;
+                grid-template-rows: 2fr 2fr 10fr 5fr;
+                grid-template-areas:
+                "header"
+                "nav"
+                "content"
+                "footer"
+                ;
+                }
+            }
+            h2 {color: 	rgb(186,85,211);}
+            h1 {color: rgb(128,0,128);}
+            body {color: 	rgb(221,160,221)}
+            img { 
+             display: block;
+             margin-left: auto;
+            margin-right: auto;}
+        </style>
+    </head>
+    <body>
+        <section id="PosicionamientoGrid">
+            <header id="header">
+                <h1>TIC2 en cuarentena</h1>
+            </header>
+            <nav id="nav">
+                <ul>
+                    <li><a href=#content>Mis trabajos TIC</a>
+                        <ul>
+                            <li><a href="#ejercicios 1">Introducción HTML</a></li>
+                            <li><a href="#ejercicios 2">Introducción CSS</a></li>
+                            <li><a href="#ejercicios 3">Ampliación HTML y CSS</a></li>
+                            <li><a href="#ejercicios 4">Web semántica y videos</a></li>
+                            <li><a href="#ejercicios 5">CSS Grid y Media Queries</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index-2.html">Mi último index</a></li>
+                    <li><a href="index-viejo.html">Mi primer index</a></li>
+                    <li><a href=#sobre_mi>Sobre mi</a></li>
+                </ul>
+            </nav>
+            <main id="content">
+                <section id="ejercicios 1">
+                    <h2>Introducción HTML</h2>
+                    <ul>
+                        <li><a href="html-ejerc1-intro.html">Ejercicio 1</a></li>
+                        <li><a href="html-ejerc2-poema.html">Ejercicio 2</a></li>
+                        <li><a href="html-ejerc3-enfasis.html">Ejercicio 3</a></li>
+                        <li><a href="html-ejerc4-listas.html">Ejercicio 4</a></li>
+                        <li><a href="html-ejerc5-utf-8.html">Ejercicio 5</a></li>
+                        <li><a href="html-ejerc6-img.html">Ejercicio 6</a></li>
+                        <li><a href="html-ejerc7-viaje.html">Ejercicio 7</a></li>
+                    </ul> 
+                   </section>
+                <section id="ejercicios 2">
+                    <h2>Introducción CSS</h2> 
+                    <ul>
+                        <li><a href="html-ejerc8-color.html">Ejercicio 8</a></li>
+                        <li><a href="html-ejerc9-criatura.html">Ejercicio 9</a></li>
+                        <li><a href="html-ejerc10-criatura2.html">Ejercicio 10</a></li>
+                        <li><a href="html-ejerc11-formato.html">Ejercicio 11</a></li>
+                        <li><a href="html-ejerc12-Olafs.html">Ejercicio 12</a></li>
+                        <li><a href="html-ejerc13-clases.html">Ejercicio 13</a></li>
+                        <li><a href="html-ejerc14-desafio-clases.html">Ejercicio 14</a></li>
+                        <li><a href="html-ejerc15-selectores.html">Ejercicio 15</a></li>
+                        <li><a href="html-ejerc16.html">Ejercicio 16</a></li>
+                    </ul>              
+                </section>
+                <section id="ejercicios 3">
+                    <h2>Ampliación HTML y CSS</h2> 
+                    <ul>
+                        <li><a href="html-ejerc18-vinculos.html">Ejercicio 18</a></li>
+                        <li><a href="html-ejerc19-vinculos_internos.html">Ejercicio 19</a></li>
+                        <li><a href="html-ejerc20-tabla.html">Ejercicio 20</a></li>
+                        <li><a href="html-ejerc21-proyecto_recetas.html">Ejercicio 21</a></li>
+                    </ul>               
+                </section>
+                <section id="ejercicios 4"> 
+                    <h2>Web semántica y videos</h2> 
+                    <ul>
+                        <li><a href="CSS 2 y Web Semántica/html-ejerc24-videos.html">Ejercicio 24</a></li>
+                    </ul>
+                </section>
+                <section id= "ejercicios 5">
+                    <h2>CSS Grid y Media Queries</h2>
+                    <ul>
+                        <li><a href="html-ejerc25-malla-google-fonts.html">Ejercicio 25</a></li>
+                        <li><a href="html-ejerc26-malla.html">Ejercicio 26</a></li>
+                        <li><a href="html-ejerc27-malla2.html">Ejercicio 27</a></li>
+                        <li><a href="html-ejerc28-responsivo.html">Ejercicio 28</a></li>
+                        <li><a href="html-ejerc29-responsivo_1.html">Ejercicio 29</a></li>
+                        <li><a href="html-ejerc30-responsivo_2.html">Ejercicio 30</a></li>
+                        <li><a href="html-ejerc31-responsivo_3.html">Ejercicio 31</a></li>
+                        <li><a href="html-ejerc32-media-querie.html">Ejercicio 32</a></li>
+                    </ul>
+                </section>
+            </main>
+            <footer id="footer">
+                <p>
+                  Me llamo Fiona Tamar Sinclair Pearse, pero prefiero que me llamen Fiona, no hace falta decir mis otros dos nombres.<br>
+Tengo 18 años y estoy en la clase 2ºC2 en el bachillerato de ciencias en el IES Dr Fleming.<br>
+Para continuar mis estudios he decidio irme a Escocia para estudiar grabación y producción de sonido.<br></p>
 
-    <header>
-    <section class="head">
-    <h1>TIC EN CUARENTENA </h1>
-    </section>
-    
-    <nav class="head2">
-     <ul>
-       <li class="submenu"><a href="">Mis trabajos  TIC</a>
-        <ul class="font">
-        <li><a href= "#HTML" >Ejercicios introducción HTML</a></li>
-        <li><a href= "#CSS" >Ejercicios introducción CSS</a></li>
-        <li><a href= "#ETIQUETAS" >Ejercicios de más etiquetas</a></li>
-        <li><a href= "#VIDEOS" >Ejercicio con videos</a></li>
-        </ul>
-        </li>
-        <li><a href="Sobre mí.html">Sobre mi</a></li>
-        <li><a href="index-viejo.html" >Mi último index</a></li>
-      
-     </nav>
-   </header>
+<p>En mi tiempo libre me gusta tocar mis intrumentos, el violín, la guitarra, el piano, el acordeón y la flauta.<br>
+También me gusta leer aunque no suelo tener tiempo para hacerlo.<br>
+No tengo muchas actividades, estoy apuntada en una academia y en el fin de semana voy a coro y clase de violín.<br>
+Solo coy a clase de guitarra cuando tengo tiempo, por lo que no voy todas las semanas.<br> </p>
 
- <img src="Index2/MUSIC.jpeg" width=100%>
-   <main>
-   
-      </section> <section id="Ejercicios">
-        <h4 class="desplazado" id="HTML">Ejercicios introducción HTML</h4>
-        <section id="Center">
-       <a href="html-ejerc1-intro.html">Ejercicio 1</a><br>
-       <a href="html-ejerc2-poema.html">Ejercicio 2</a><br>
-       <a href="html-ejerc3-enfasis.html">Ejercicio 3</a><br>
-       <a href="html-ejerc4-listas.html">Ejercicio 4</a><br>
-       <a href="html-ejerc5-utf-8.html">Ejercicio 5</a><br>
-       <a href="html-ejerc6-listas .html">Ejercicio 6</a><br>
-       <a href="html-ejerc7-viaje.html">Ejercicio 7</a><br>
-      </section>
-     
-      
-     
-      <section>
-       <h4  class="desplazado" id="CSS">Ejercicios introducción CSS</h4>
-       <section id="Center1">
-       <a href="html-ejerc8-color.html">Ejercicio 8</a><br>
-       <a href="html-ejerc9-criatura.html">Ejercicio 9</a><br>
-       <a href="html-ejerc10-criatura2.html">Ejercicio 10</a><br>
-       <a href="html-ejerc11-formato.html">Ejercicio 11</a><br>
-       <a href="html-ejerc12-Olaf .html">Ejercicio 12</a><br>
-       <a href="html-ejerc13-clases.html">Ejercicio 13</a><br>
-       <a href="html-ejerc14-desafio-clases.html">Ejercicio 14</a><br>
-       <a href="html-ejerc15-selectores.html">Ejercicio 15</a><br>
-       <a href="html-ejer16.html">Ejercicio 16</a><br>
-      </section>
-      
-     
-      <section>
-       <h4 class="desplazado" id="ETIQUETAS">Ejercicios de más etiquetas</h4>
-        <section id="Center1">
-        <a href="html-ejerc18-vinculos">Ejercicio 18</a><br>
-        <a href="html-ejerc19-vinculos_internos">Ejercicio 19</a><br>
-        <a href="html-ejerc20-tabla">Ejercicio 20</a><br>
-        <a href="html-ejerc21-proeycto_recetas">Ejercicio 21</a><br>
-      </section>
-      
-      
-      <section>
-       <h4  class="desplazado" id="VIDEOS">Ejercicios de videos</h4>
-        <section id="Center1">
-        <a href="html-ejerc24-videos">Ejercicio 22</a><br>
-      </section>
-       
-       </section>
-     
-      
-    </section>
-    <footer>
-    <img src="Index/logo.jpg" width="150px"><br> Fiona Tamar Sinclair Pearse. Clase: 2ºC1
-    </footer>
-    </main>
- </body>
+<p>Mi correo es fionatp03@educastur.es</p>
+                <img src="LOGO/MUSIC.jpg" width=40%>
+            </footer>
+        </section>
+    </body>
 </html>

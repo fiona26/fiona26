@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>Malla</title>
+        <style>
+            #Contenedor {display: grid;
+                         width: 50%;
+                         height: 200px;
+                         border-radius: 3px;
+                         border-style: solid;
+                         border-color: black;
+                         grid-template-rows: 50% 50%;
+                         grid-template-columns: 4fr 2fr 1fr;}
+
+            #Contenedor2 {display: grid;
+                         width: 700px;
+                         height: 700px;
+                         border-radius: 3px;
+                         border-style: solid;
+                         border-color: black;}
+
+            #img {width: 700px}
+            
+            #elem-1 {grid-column-start: 1;
+                     grid-column-end: 2;
+                     grid-row-start: 1;
+                     grid-row-end: 2;
+                     background-color: pink;
+                     border-style: solid;
+                     border-radius: 3px;
+                     border-color: rgb(202, 134, 145);
+                     margin-top: 3px;
+                     margin-bottom: 3px;
+                     margin-left: 3px;
+                     margin-right: 3px;}
+
+            #elem-2 {grid-column-start: 2;
+                     grid-column-end: 3;
+                     grid-row-start: 1;
+                     grid-row-end: 2;
+                     background-color: cyan;
+                     border-style: solid;
+                     border-radius: 3px;
+                     border-color: rgb(0, 233, 233);
+                     margin-top: 3px;
+                     margin-bottom: 3px;
+                     margin-left: 3px;
+                     margin-right: 3px;}
+
+            #elem-3 {grid-column-start: 3;
+                     grid-column-end: 4;
+                     grid-row-start: 1;
+                     grid-row-end: 2;
+                     background-color: rgb(92, 223, 92);
+                     border-style: solid;
+                     border-radius: 3px;
+                     border-color: rgb(80, 199, 80);
+                     margin-top: 3px;
+                     margin-bottom: 3px;
+                     margin-left: 3px;
+                     margin-right: 3px;}
+
+            #elem-4 {grid-column-start: 1;
+                     grid-column-end: 2;
+                     grid-row-start: 2;
+                     grid-row-end: 3;
+                     background-color: yellow;
+                     border-style: solid;
+                     border-radius: 3px;
+                     border-color: rgb(236, 236, 2);
+                     margin-top: 3px;
+                     margin-bottom: 3px;
+                     margin-left: 3px;
+                     margin-right: 3px;}
+
+            #elem-5 {grid-column-start: 2;
+                     grid-column-end: 3;
+                     grid-row-start: 2;
+                     grid-row-end: 3;
+                     background-color: orangered;
+                     border-style: solid;
+                     border-radius: 3px;
+                     border-color: rgb(201, 54, 0);
+                     margin-top: 3px;
+                     margin-bottom: 3px;
+                     margin-left: 3px;
+                     margin-right: 3px;}
+
+            #elem-6 {grid-column-start: 3;
+                    grid-column-end: 4;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                    background-color: rgb(128, 0, 64);
+                    border-style: solid;
+                    border-radius: 3px;
+                    border-color: rgb(87, 0, 43);
+                    margin-top: 3px;
+                    margin-bottom: 3px;
+                    margin-left: 3px;
+                    margin-right: 3px;}
+        </style>
+	</head>
+	<body>
+       <div id="Contenedor">
+           <div id="elem-1">A</div>
+           <div id="elem-2">B</div>
+           <div id="elem-3">C</div>
+           <div id="elem-4">D</div>
+           <div id="elem-5">E</div>
+           <div id="elem-6">F</div>
+       </div>
+       <div id="Contenedor2">
+           <img src="LOGO/Malla.png" id="img">
+       </div>
+	</body>
+</html>

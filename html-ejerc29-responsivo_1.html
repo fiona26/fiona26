@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>Responsivo 1</title>
+        <style>
+            #Contenedor {display: grid;
+                         height: 400px;
+                         width: 600px;
+                         grid-template-rows: repeat(4, 100px);
+                         grid-template-columns: repeat(4, 150px);
+                         border-style: solid;
+                         border-radius: 3px;
+                         border-color: black;}
+
+            #A1 {background-color: lightblue;
+                 border-style: solid;
+                 border-radius: 3px;
+                 border-color: lightblue;
+                 grid-row: 2 / 5;
+                 grid-column: 3/span 2;
+                 font-size: 1.1em;}
+
+            #A2 {background-color: rgb(255,20,147);
+                 border-style: solid;
+                 border-radius: 3px;
+                 border-color: rgb(255,20,147);
+                 grid-row: 3;
+                 grid-column: 2;
+                 font-size: 0.8em}
+
+            p {margin-top: 5px;
+               margin-left: 5px;
+               font-family: Arial, Helvetica, sans-serif;}
+        </style>
+	</head>
+	<body>
+        <div id="Contenedor">
+            <section id="A1">
+                <p>
+                    grid-row: 2 / 5;
+                    <br>
+                    <br>
+                    grid-column:
+                    <br>
+                    3 / span 2;
+                </p>
+            </section>
+            <section id="A2">
+                <p>
+                    grid-row: 3;
+                    <br>
+                    <br>
+                    grid-column: 2;
+                </p>
+            </section>
+        </div>
+    </body>
+</html>

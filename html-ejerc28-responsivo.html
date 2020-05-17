@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsivo</title>
+        <style>
+            header {grid-area: header;
+                    background-color: pink;
+                    border-style: solid;
+                    border-radius: 3px;
+                    border-color: pink;
+                    margin-top: 3px;
+                    margin-right: 3px;
+                    margin-left: 3px;
+                    margin-bottom: 3px;}
+
+            aside {grid-area: aside;
+                   background-color: cyan;
+                   border-style: solid;
+                   border-radius: 3px;
+                   border-color: cyan;
+                   margin-top: 3px;
+                   margin-right: 3px;
+                   margin-left: 3px;
+                   margin-bottom: 3px;}
+
+            main {grid-area: main;
+                  background-color: greenyellow;
+                  border-style: solid;
+                  border-radius: 3px;
+                  border-color: greenyellow;
+                  margin-top: 3px;
+                  margin-right: 3px;
+                  margin-left: 3px;
+                  margin-bottom: 3px;}
+            footer {grid-area: footer;
+                    background-color: yellow;
+                    border-style: solid;
+                    border-radius: 3px;
+                    border-color: yellow;
+                    margin-top: 3px;
+                    margin-right: 3px;
+                    margin-left: 3px;
+                    margin-bottom: 3px;}
+
+            body {display: grid;
+                  grid-gap: 10px 20px;
+                  grid-template-columns: 1fr 200px;
+                  grid-template-rows: 100px 1fr auto;
+                  grid-template-areas:
+                  "header header"
+                  "main aside"
+                  "footer aside";
+                  border-style: solid;
+                  border-radius: 3px;
+                  border-color: black;}
+
+            @media (max-width: 600px) {body {display: grid;
+                                             grid-gap: 0;
+                                             grid-template-rows: auto 1fr auto auto;
+                                             grid-template-columns: 1fr;
+                                             grid-template-areas:
+                                             "header"
+                                             "main"
+                                             "aside"
+                                             "footer";}
+                                                      }
+        </style>
+	</head>
+	<body>
+        <header>
+            Header
+        </header>
+        <aside>
+            Aside
+        </aside>
+        <main>
+            Content
+            <section>
+                <h1>px</h1>
+                <p>Pixeles</p>
+                <h1>fr</h1>
+                <p>Fracciones o partes del espacio disponibles</p>
+                <h1>em</h1>
+                <p>Tantas veces como se indique de las dimensiones de la fuente del elemento</p>
+                <h1>vw</h1>
+                <p>1% de la anchura de la ventana</p>
+                <h1>vh</h1>
+                <p>1% de la altura de la ventana</p>
+                <h1>%</h1>
+                <p>Tanto por ciento de las dimensiones del elemento principal</p>
+                <h1>auto</h1>
+                <p>Determinado por el navegador</p>
+            </section>
+        </main>
+        <footer>
+            footer
+        </footer>
+	</body>
+</html>
